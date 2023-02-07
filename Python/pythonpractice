@@ -1,1 +1,914 @@
 
+Python Practice
+#### python version
+import sys
+from platform import python_version
+print(sys.version)
+print(python_version())
+3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]
+3.10.0
+### keywords in python
+import keyword
+print(keyword.kwlist)
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+print('hello this mahesh')
+hello this mahesh
+### python data types they are int,float,bool,str,complex
+
+a=10
+b='10'
+c=10.0
+d=10+0j
+e=True
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+print(id(a))
+print(id(b))
+print(id(c))
+print(id(d))
+print(id(e))
+<class 'int'>
+<class 'str'>
+<class 'float'>
+<class 'complex'>
+<class 'bool'>
+2471165755920
+2471202467376
+2471240970960
+2471242820304
+140721506794344
+########################## TYPE CASTING################################
+#we can convert one datatype to another datatype iscalled "Typecasting" or "Type conversion"
+a=int(123.456)
+print(type(a))
+b=float(123)
+print(type(b))
+c=str(123.456)
+print(type(c))
+d=bool(200)
+print(type(d))
+e=complex(10)
+print(type(e))
+print(a,b,c,d,e)
+<class 'int'>
+<class 'float'>
+<class 'str'>
+<class 'bool'>
+<class 'complex'>
+123 123.0 123.456 True (10+0j)
+####### python operators
+a=10
+b=20
+print(a+b)# addition
+print(a-b)## subtraction
+print(a*b)## multiplication
+print(a/b) ## division  (this opeartor always return float value) 
+print(a**b)#exponent operator or power operator 
+print(a//b) ## floor opeartor (this opeartor always return ifvalue int it return int incase float it return float valu)
+30
+-10
+200
+0.5
+100000000000000000000
+0
+#### relational operators
+a=10
+b=20
+print(a>b)
+print(a<b)
+print(a>=b)
+print(a<=b)
+False
+True
+False
+True
+#### equality operator 
+print(10==20)
+print(10!=20)
+print(10==True)
+print(False==False)
+print("mahesh"=="mahesh")
+False
+True
+False
+True
+True
+##### logical operators and, or, not
+print(10 and 10)
+print(10 or 20)
+print(not 10)
+'mahesh' and 'rampemahesh'
+
+##### bitwise operators
+print(4&5)
+print(True & True)
+print(10<<2)
+10
+10
+False
+4
+True
+40
+##### special operator 
+### python has two special operators 1.identity 2.membership operator.
+### idntity operator is the address comparsion  they are 2 ifentify operstord 1.is 2.isnot
+### identify is operators is comapred the address that assigend varible elements both same it will br return true otherwise it return false
+a=10
+b=10
+c=20
+print(a is b)
+print(b is c)
+print(a is not c)
+True
+False
+True
+##membership operator
+### membership operator is check that given obj present in the given collection it may be string,list,set,tuple or dict.
+x='ramanaiah is linux admin'
+print('ra'in x)
+print('o' in x)
+print('o' not in x)
+True
+False
+True
+### operator precedence
+### in this operator have multiple operators which will be evulated first is known as precedence.
+#### 1.() 2.** 3.~ 4.*,/,%,// 5.+,-
+print(2+3**2)
+print(2*(3)*(4))
+print(2+(3)**(3))
+print(2/3+3)
+print(2+(3*6)/5)
+print(3+(9**2)/2)
+11
+24
+29
+3.6666666666666665
+5.6
+43.5
+###math module
+import math
+print(math.sqrt(16))
+print(math.pi)
+4.0
+3.141592653589793
+from math import factorial
+print(factorial(4))
+24
+## argv is not array it is list .it is available sys module.
+from sys import argv
+print(type(argv))
+print(argv[0])
+<class 'list'>
+C:\Users\rampe\AppData\Local\Programs\Python\Python310\lib\site-packages\ipykernel_launcher.py
+##### String Datatype
+### any sequence of character with in either single or double quoteas is consider as string.
+s='mahesh'
+m="mahesh"
+p='"maheshrampe"'
+print(s)
+print(m)
+print(p)
+mahesh
+mahesh
+"maheshrampe"
+#### Access characters using a string.
+## 1.by using index
+###2. slice operator
+################################ index#######################################
+print('index concept')
+s='mahesh'
+print(s[0])
+print(s[-1])
+print(s[-3])
+print(s[3])
+print(s[4])
+print(s[-2])
+
+###################################
+p='mahesh'
+print('my name is {}'.format(p))
+print()
+q='rampe'
+print('myname is {}, my surname is {}'.format(p,q))
+index concept
+m
+h
+e
+e
+s
+s
+my name is mahesh
+
+myname is mahesh, my surname is rampe
+################################################### slice operator###############################
+
+s='maheshrampe he is a tcs employee'
+print(s[0:14])
+print(s[1:20:1])
+print(s[0:20:2])
+print(s[-1])
+print(s[::7])
+maheshrampe he
+aheshrampe he is a 
+mhsrmeh sa
+e
+ma co
+#help('functions')
+####list is a similar to array.it is a collection of different elements it is denoted as squre brackt.[] 
+l=[1,2,3,4,"Mahesh",20.5,10+0j]
+print(type(l))
+print(l)
+
+b=eval(input('enter list::'))
+print(b)
+print(type(b))
+<class 'list'>
+[1, 2, 3, 4, 'Mahesh', 20.5, (10+0j)]
+enter list::1,2,3,4,'mahesh'
+(1, 2, 3, 4, 'mahesh')
+<class 'tuple'>
+################### practice########################
+f=input('enter first name:')
+n=input('enter lastname')
+print('hello',f )
+print('surname',n)
+print('myname is mahesh\n my surname is rampe')
+enter first name:Mahesh
+enter lastnamerampe
+hello Mahesh
+surname rampe
+myname is mahesh
+ my surname is rampe
+n=int(input('enter first:'))
+m=int(input('enter second'))
+ans=n+m
+print('the answer is',ans)
+enter first:10
+enter second20
+the answer is 30
+n=int(input('enter first:'))
+m=int(input('enter second'))
+p=int(input('enter the third:'))
+ans=(n+m)*p
+print('the answer is',ans)
+enter first:10
+enter second20
+enter the third:30
+the answer is 900
+n=int(input('enter first:'))
+m=int(input('enter second'))
+ans=n-m
+print('the answer is',ans,"nanananana")
+enter first:10
+enter second20
+the answer is -10 nanananana
+s=input('enter name:')
+p=int(input('enter age:'))
+n=p+1
+print(s,'next bday you will be',n)
+enter name:mahesh
+enter age:24
+mahesh next bday you will be 25
+n=int(input('enter first:') )
+m=int(input('enter second'))
+ans=n/m
+print('the answer is',ans,"nanananana")
+enter first:10
+enter second20
+the answer is 0.5 nanananana
+n=int(input('enter day'))
+h=n*24
+m=h*60
+s=m*60
+print('in',n,'days there are')
+print(h,'hours')
+print(m,'mintes')
+print(s,'seconds')
+enter day24
+in 24 days there are
+576 hours
+34560 mintes
+2073600 seconds
+list Method
+l=[1,2,3,'mahesh',20.4,5,10+0j]
+print(l)
+[1, 2, 3, 'mahesh', 20.4, 5, (10+0j)]
+print(l[0])
+1
+print(l[-1])
+(10+0j)
+l[2]=777
+print(l)
+[1, 2, 777, 'mahesh', 20.4, 5, (10+0j)]
+l.append(20)
+print(l)
+[1, 2, 777, 'mahesh', 20.4, 5, (10+0j), 20]
+l.copy()
+print(l)
+[1, 2, 777, 'mahesh', 20.4, 5, (10+0j), 20]
+l2=l.copy()
+print(l2)
+[1, 2, 777, 'mahesh', 20.4, 5, (10+0j), 20]
+print(len(l))
+8
+l.insert(5,8888)
+print(l)
+[1, 2, 777, 'mahesh', 20.4, 8888, 5, (10+0j), 20]
+l3=['manu','babu',0,10.50,5]
+l.extend(l3)
+print(l)
+[1, 2, 777, 'mahesh', 20.4, 8888, 5, (10+0j), 20, 'manu', 'babu', 0, 10.5, 5]
+l.remove('manu')
+print(l)
+[1, 2, 777, 'mahesh', 20.4, 8888, 5, (10+0j), 20, 'babu', 0, 10.5, 5]
+l.pop(9)
+print(l)
+[1, 2, 777, 'mahesh', 20.4, 8888, 5, (10+0j), 20, 0, 10.5, 5]
+l.reverse()
+print(l)
+[5, 10.5, 0, 20, (10+0j), 5, 8888, 20.4, 'mahesh', 777, 2, 1]
+###### list methods ###########################
+l=[1,2,3,4,5,6]
+l.append(7)
+l.insert(2,8)
+print(l)
+print('insert method for add value from the postion where we insert',l)
+print('append add last elemnt add in the list',l)
+[1, 2, 8, 3, 4, 5, 6, 7]
+insert method for add value from the postion where we insert [1, 2, 8, 3, 4, 5, 6, 7]
+append add last elemnt add in the list [1, 2, 8, 3, 4, 5, 6, 7]
+l.remove(2)
+print(l)#####remove method has index postion starts with first postion.
+[1, 8, 3, 4, 5, 6, 7]
+l.pop() ########### pop method is used to remove last elemnt in given list
+print(l)
+[1, 8, 3, 4, 5, 6]
+print(len(l))
+6
+print(l)
+[1, 8, 3, 4, 5, 6]
+print(l.count(2)) ### it is used to count the values in the given list
+0
+print(l.index(1))
+0
+l1=[1,2,3]
+l2=[4,5,6]
+l1.extend(l2)
+print(l1)
+[1, 2, 3, 4, 5, 6]
+l2=l1.copy()
+l2
+[1, 2, 3, 4, 5, 6]
+p=[1,4,2,5,7,3,89,122,823,10,12]
+p.sort()
+print(p)
+[1, 2, 3, 4, 5, 7, 10, 12, 89, 122, 823]
+Tuple method
+## tuple is same like list.it also collection of group of elements in tuple we cannot improve and decresses the size of the tuple
+## in tuple there are some methods 
+## indexing postion
+t=(1,2,3,4,5,6)
+print(t[1])
+2
+## slicing method in n=n to  n-1 postion 
+print(t[1:5])
+(2, 3, 4, 5)
+### repetition 
+print(b*2)
+(1, 2, 3, 4, 'mahesh', 1, 2, 3, 4, 'mahesh')
+### membership opeartor
+a=(1,2,3,4,5,5,56,6)
+print(5 in a)
+print(10 in a)
+True
+False
+##### comparison 
+a=('mahesh','rampe',1,1,2,3)
+b=('mahesh','ganga',5,6,7,8)
+print(a==b)
+print(a!=b)
+False
+True
+a=(1,2,3,9.4,94,8.3)
+t1=sorted(a)
+print(a)
+(1, 2, 3, 9.4, 94, 8.3)
+print(a.count(2))
+1
+print(a.index(1))
+0
+################################ list
+l=[1,3,5,6,2,56,3]
+l.append(9)
+print(l)
+[1, 3, 5, 6, 2, 56, 3, 9]
+l=[1,3,5,6,2,56,3]
+l.insert(4,10)
+print(l)
+[1, 3, 5, 6, 10, 2, 56, 3]
+l=[1,3,5,6,2,56,3]
+l.pop()
+print(l)
+[1, 3, 5, 6, 2, 56]
+l=[1,3,5,6,2,56,3]
+l.remove(3)
+print(l)
+[1, 5, 6, 2, 56, 3]
+l.sort()
+print(l)
+[1, 2, 3, 5, 6, 56]
+l.reverse()
+print(l)
+[56, 6, 5, 3, 2, 1]
+l1=[5,3,5,7]
+l2=[4,6,5,2]
+l1.extend(l2)
+print(l1)
+[5, 3, 5, 7, 4, 6, 5, 2]
+######################################## tuple#################
+t=(1,2,3,4,5)
+t.index(2)
+#print(t)
+1
+print(t[:-1])
+(1, 2, 3, 4)
+print(t*2)
+(1, 2, 3, 4, 5, 1, 2, 3, 4, 5)
+t1=sorted(t)
+print(t1)
+[1, 2, 3, 4, 5]
+##### set is used to represent a group unique values as a single entity then we should go for set. duplicates are not alloewed
+### indexing and slicing not allowed
+### cuerly braces {}
+s={10,20,39}
+print(s)
+{10, 20, 39}
+l=[10,20,30,40,10,20,30]
+s=set(l)
+print(s)
+{40, 10, 20, 30}
+s=set(range(6))
+print(s)
+{0, 1, 2, 3, 4, 5}
+s=set()
+print(type(s))
+<class 'set'>
+s={}
+print(s)
+print(type(s))
+{}
+<class 'dict'>
+s={10,20,30,40} #### set.add method is used to add elemts in the first
+s.add(40)
+print(s)
+{40, 10, 20, 30}
+l=[50,60,70,80]### to add multiple items in a set, all elmts present in the given lterable obj will be set 
+s.update(l)
+print(s)
+{70, 40, 10, 80, 50, 20, 60, 30}
+s.update(range(1,10,2),range(0,10,2))
+print(s)
+{0, 1, 2, 3, 4, 5, 70, 7, 40, 9, 10, 6, 8, 80, 50, 20, 60, 30}
+p={10,20,30,40,50,60}
+q=p.copy()
+print(q)
+{50, 20, 40, 10, 60, 30}
+p.pop()##### pop remove any elemnt in the set
+print(p)
+{20, 40, 10, 60, 30}
+print(p)
+{20, 40, 10, 60, 30}
+#p.remove(50)##### in set remove method only values in the sset not index postion.
+#print(p)
+p.discard(30) ##### discard method for remove elemts in set and incase value is not in the set the it will return the same set
+print(p)
+{20, 40, 10, 60}
+p.clear()
+print(p)
+set()
+s={10,20,30,40,50} ##### union is used to return the values from both sets without duplicates 
+w={10,20,30,60}
+print(s.union(w))
+print(s|w)
+{40, 10, 50, 20, 60, 30}
+{40, 10, 50, 20, 60, 30}
+###### intersection function
+print(s & w)
+print(s.intersection(w))### intersection is return the duplicates of the given sets.
+{10, 20, 30}
+{10, 20, 30}
+print(s.difference(w))### it return the different elements from the first set
+print(s-w)
+print(w-s)
+{40, 50}
+{40, 50}
+{60}
+print(s.symmetric_difference(w)) ### it return the different elements from two sets.
+{40, 50, 60}
+s=set('mahesh')
+print('h' in s)
+True
+################  set ######################################
+s={}
+print(type(s))
+p=set({})
+print(type(p))
+m={1,2,3}
+print(m)
+m.add(0)
+print(m)
+m.remove(0)
+print(m)
+m.pop()
+print(m)
+l=[10,20,30]
+m.update(l)
+print(m)
+<class 'dict'>
+<class 'set'>
+{1, 2, 3}
+{0, 1, 2, 3}
+{1, 2, 3}
+{2, 3}
+{2, 3, 10, 20, 30}
+s1={10,20,30,40}
+s2=s1.copy()
+print(s2)
+{40, 10, 20, 30}
+### intersection_update is used return the common elements in the two sets.
+k={1,2,3,4}
+n={1,2,3}
+k.intersection_update(n)
+print(n)
+{1, 2, 3}
+#### remove the item in the set that are also include in another specified set
+k.difference_update(n)
+print(n)
+{1, 2, 3}
+k.isdisjoint(n)#### return whether two sets have a intersection or not
+print(n)
+{1, 2, 3}
+k.issubset(n)#### issubset return whether set contains this set or not
+print(n)
+{1, 2, 3}
+k.issuperset(n) #### return whether this set contains another set or not
+print(n)
+{1, 2, 3}
+#### if we want to repesent group of objects as key-value pairs then we go for dict. 
+### duplicate keys are not allowed 
+## but values be duplicated
+s={}
+print(type(s))
+p=dict()
+print(type(p))
+<class 'dict'>
+<class 'dict'>
+d={1:"mahesh",2:'Rampe',3:"pichi"}
+print(d)
+d={1:100,2:200,3:300}
+print(d)
+{1: 'mahesh', 2: 'Rampe', 3: 'pichi'}
+{1: 100, 2: 200, 3: 300}
+d={}
+d[100]='mahesh'
+d[101]='rampe'
+d[101]='mahesh'### duplicate keys are not allowed 
+d[104]='mahesh rampe'
+print(d)
+{100: 'mahesh', 101: 'mahesh', 104: 'mahesh rampe'}
+#### update dict
+d[400]='gangadhar'
+print(d)
+d[1000]=9581.00
+print(d)
+d[1111]='8888.0'
+print(d)
+{100: 'mahesh', 101: 'mahesh', 104: 'mahesh rampe', 400: 'gangadhar'}
+{100: 'mahesh', 101: 'mahesh', 104: 'mahesh rampe', 400: 'gangadhar', 1000: 9581.0}
+{100: 'mahesh', 101: 'mahesh', 104: 'mahesh rampe', 400: 'gangadhar', 1000: 9581.0, 1111: '8888.0'}
+### delete from dict
+del d[1000]
+print(d)
+del d[1111]
+print(d)
+##### clear() is the method to empty the dict. 
+######  del d is another method to delete the total dict
+{100: 'mahesh', 101: 'mahesh', 104: 'mahesh rampe', 400: 'gangadhar', 1111: '8888.0'}
+{100: 'mahesh', 101: 'mahesh', 104: 'mahesh rampe', 400: 'gangadhar'}
+##### important functions of dictionary.
+print(len(d))
+print(d.get(100))#### get function always return the value from dict otherwise return none.
+print(d.get(100,'mahesh'))
+print(d.get(100,'guest'))## get check if the dict has value is there or not incase it has they return.
+print(d.get(499))## not in the dict it can return none not error.
+print(d.pop(101))### pop is remove entry associated with specific key and return the corresponding value.
+4
+mahesh
+mahesh
+mahesh
+None
+mahesh
+d[101]='mahesh'
+d[111]='ganga'
+d[121]='rampe'
+d[131]='tcs'
+d[141]='TATA'
+print(d)
+{100: 'mahesh', 104: 'mahesh rampe', 400: 'gangadhar', 101: 'mahesh', 111: 'ganga', 121: 'rampe', 131: 'tcs', 141: 'TATA'}
+print(d.pop(141))
+TATA
+print(d)
+{100: 'mahesh', 104: 'mahesh rampe', 400: 'gangadhar', 101: 'mahesh', 111: 'ganga', 121: 'rampe', 131: 'tcs'}
+print(d.popitem()) ### it remove an arbitary item key-value from dict and return it.
+print(d)
+(131, 'tcs')
+{100: 'mahesh', 104: 'mahesh rampe', 400: 'gangadhar', 101: 'mahesh', 111: 'ganga', 121: 'rampe'}
+print(d.keys()) ### return the keys in dict
+dict_keys([100, 104, 400, 101, 111, 121])
+print(d.values()) #### return the values in dict.
+dict_values(['mahesh', 'mahesh rampe', 'gangadhar', 'mahesh', 'ganga', 'rampe'])
+d1=d.copy()### copy dict.
+print(d1)
+{100: 'mahesh', 104: 'mahesh rampe', 400: 'gangadhar', 101: 'mahesh', 111: 'ganga', 121: 'rampe'}
+print(d.setdefault(400,'pichi'))##### setdefault always return the corresponding value in the keys.if it is available.
+print(d)
+gangadhar
+{100: 'mahesh', 104: 'mahesh rampe', 400: 'gangadhar', 101: 'mahesh', 111: 'ganga', 121: 'rampe'}
+print(d)
+{100: 'mahesh', 104: 'mahesh rampe', 400: 'gangadhar', 101: 'mahesh', 111: 'ganga', 121: 'rampe'}
+### final practice once dict
+p={}
+p[100]='mahesh'
+p[111]='ganga'
+p[222]='samba'
+p[333]='chick'
+p[444]='mutton'
+p[555]='fish'
+print(p)
+{100: 'mahesh', 111: 'ganga', 222: 'samba', 333: 'chick', 444: 'mutton', 555: 'fish'}
+del p[555]### delete
+print(p)
+{100: 'mahesh', 111: 'ganga', 222: 'samba', 333: 'chick', 444: 'mutton'}
+p.pop(444)## remove the value.
+print(p)
+{100: 'mahesh', 111: 'ganga', 222: 'samba', 333: 'chick'}
+p.get(333)
+'chick'
+p.get(555)
+p.popitem()## last remove key_value.
+(333, 'chick')
+p.values()
+dict_values(['mahesh', 'ganga', 'samba'])
+p.keys()
+dict_keys([100, 111, 222])
+p.setdefault(900,'super')## it retrn the default values incase corresoponding value.
+'super'
+#1.write a fun to take name of student as input and print wish the message by name.
+def wish(name):
+    print('hello',name,'good morning')
+wish('mahesh')
+wish('rampe')
+
+#2.print squre value
+def squre(number):
+    print('the squre',number,'is',number*number)
+squre(4)
+
+#### 3.print add of two numbers using with functions
+def add(a,b):
+    print('the number is',a+b)
+add(2,4)
+add('mahesh','rampe')
+hello mahesh good morning
+hello rampe good morning
+the squre 4 is 16
+the number is 6
+the number is maheshrampe
+l=[1,2,3,4,5,6]
+def fun(l):
+    print(l,sep='\n')
+fun(l)
+[1, 2, 3, 4, 5, 6]
+def fun():
+    for i in range(5):
+        print(i)
+        
+fun()
+print(type(l))
+0
+1
+2
+3
+4
+<class 'list'>
+l=[1,2,3,4,5]
+def ls(l):
+    print(l)
+    return l
+ls(l)
+[1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5]
+def ac():
+    print('mahesh')
+ac()
+mahesh
+## a fun can take input values as a parameters and execute the logic and return output is called return statement.
+def sum_add(a,b):
+    c=a+b
+    d=a-b
+    return c,d
+## call the function
+c,d=sum_add(5,10)
+print("result = {}and other value {}".format(c,d))
+result = 15and other value -5
+def fun(m,n):
+    a=m+n
+    b=m-n
+    c=m*n
+    d=m/n
+    e=m**n
+    f=m//n
+    g=m&n
+    return a,b,c,d,e,f,g
+## call the fun
+func=fun(2,3)
+print(func)
+for i in func:print(i)
+(5, -1, 6, 0.6666666666666666, 8, 0, 2)
+5
+-1
+6
+0.6666666666666666
+8
+0
+2
+def even_odd(num):
+    if num%2==0:
+        print(num,'is even')
+    else:
+        print(num,'is odd')
+even_odd(10)
+even_odd(20)
+even_odd(27)
+10 is even
+20 is even
+27 is odd
+### postional argumnets
+#-- the arguments passed to the function is called postional arguments
+#--- the postional and number of argumenst are must matched.if we change the order then result may be change.
+def postional(a,b):
+    print(a-b)
+postional(20,10)
+### in case we take postional arguments three like 
+#postional(10,20,30) we get error.
+
+##TypeError: postional() takes 2 positional arguments but 3 were given
+10
+#### keyword arguments.
+### we can pass the argument values by keyword is known as paramerter name.
+def wish(n,m):
+    print('hello',n,m)
+wish(n='mahesh',m='good morning')
+wish(m='good morning',n='mahesh')
+wish('mahesh','good morning')
+#note:we can take both postional and keyword arguments simultaneously but we can take both postional and keyword arguments otherwise we will get the error.
+#wish(n='mahesh','goodmorning')
+hello mahesh good morning
+hello mahesh good morning
+hello mahesh good morning
+###3. default argumenst
+#### sometimes we can provide default values for our postional arguments.
+def wish(name='mahesh'):
+    print('hello',name,'good morning')
+wish('durga')
+wish('ganga')
+### after default arguments se should not take non default arguments 
+hello durga good morning
+hello ganga good morning
+### 4.varible length arguments
+## some times we can pass the varible number of argumenst to our function such type of arguments are called varible length arguments
+### we can declare as lenth argumenst with * symbol as follows.
+def sum(*n):
+    total=0
+    for n1 in n:
+        total=total+n1
+    print('the sum=',total)
+    
+sum()
+sum(10)
+the sum= 0
+the sum= 10
+##### TYPES OF VAIABLE
+## python support 2 types of varible
+## 1.Global varible
+## 2.local Varible
+## the varible which are declared outside of a function is called global variable.
+a=10### global variable.
+def f1():
+    print(a)
+def f2():
+    print(a)
+    
+f1()
+f1()
+10
+10
+### local variable
+def f1():
+    a=10## the variable are declare inside of a function is called local variable.
+    print(a)
+f1()
+10
+### Global keyword
+### we can use global keyword for the following 2 purpose.
+# 1. to declare global varible inside function.
+# 2. to make global varible available to the function so that we can perform required modification.
+a=10
+def f1():
+    a=777
+    print(a)
+f1()
+f2()
+777
+10
+### recursive function.
+## a function that calls itself is known as recursive function.
+def fact(n):
+    if n==0:
+        r=1
+    else:
+        r=n*fact(n-1)
+    return r
+print('fact of 4 is:',fact(4))
+print('fact of 5 is:',fact(5))
+fact of 4 is: 24
+fact of 5 is: 120
+##### anonymous function: some times we declare a function without anyname suchtype of nameless function is called ananymous or lambda function.
+## the main purpose of anonymous function is just for instant use(for one time usage)
+### lambda function we define by using lambda keyword  syntax: lambda n:n*n
+s=lambda n:n*n
+print('the squre of 4 is:',s(4))
+the squre of 4 is: 16
+#### filter()function :: we can use filter() function to filter the values from given sequence based on some condition.
+def isEVen(x):
+    if x%2==0:
+        return True
+    else:
+        return False
+l=[0,5,10,15,20,25,30]
+l1=list(filter(isEVen,l))
+print(l1)
+[0, 10, 20, 30]
+##### map function()::for every element present in the given sequencies apply sum functionality and generate new elemnts with required modification for this requirements we should go for map() function.
+## ex:
+l=[1,2,3,4,5]
+def doubleit(x):
+    return 2*x
+l1=list(map(doubleit,l))
+print(l1)
+[2, 4, 6, 8, 10]
+### reduce() function:::
+# reduce function reduces sequnece of elemnts into a single elemnts by applying the specified function
+from functools import *
+l=[10,20,30,40]
+r=reduce(lambda x,y:x+y,l)
+print(r)
+100
+#### decarator
+def addsum(func):
+    def inner(a,b):
+        if b==0:
+            return("hello stupif ...how we can add with zero")
+            
+        else:
+            return func(a,b)
+    return inner
+@addsum
+def sum(a,b):
+    return a/b
+print(sum(10,2))
+print(sum(10,5))
+5.0
+2.0
+def decor(func):
+    def inner():
+        value=func()
+        return value+2
+    return inner
+@decor
+def num():
+    return 10
+print(num())
+12
+def decor(func):
+    def inner(a,b):
+        return
+    return inner
+
+def num(a,b):
+    return a*b
+print(num(2,4))
